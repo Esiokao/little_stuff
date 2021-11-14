@@ -1,0 +1,57 @@
+*,
+*:after,
+*:before {
+   box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Source+Sans+Pro&display=swap');
+
+:root {
+   --color-bg-primary: #72636e;
+   --color-bg-primary-offset: hsl(315deg 10% 70% / 1);
+   --color-bg-secondary: #ffffff;
+   --color-text-primary: #3a3c42;
+   --color-text-primary-offset: #898c94;
+   --color-orange: #dc9960;
+   --color-green: #1eb8b1;
+   --color-purple: #657cc4;
+   --color-black: var(--color-text-primary);
+   --color-red: #d92027;
+   --var-sublist-left: 'calc(100%-8px)'; /* adjust the sublist position with js if it's out of boundary */
+}
+
+body {
+   font-family: 'Nunito', sans-serif;
+   height: 100vh;
+}
+
+.wrapper {
+   background-image: url(https://nipponcolors.com/images/texture.png);
+}
+
+/* shadow with pseudo attr */
+.shadow::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   opacity: 0;
+   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+   transition: opacity 350ms ease-out, transform 350ms ease-out;
+}
+
+.shadow:hover::before {
+   opacity: 1;
+}
+/* shadow with pseudo attr */
+/* hover with translateY */
+.hover-top:hover {
+   transform: translateY(-1.5px);
+}
+/* hover with translateY */
+.menu > ul ~ ul {
+   border-top: 1px solid #ddd;
+}

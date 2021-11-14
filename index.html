@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.js"
+         integrity="sha512-Ii89uDraLkOMYAuY2TJ2Mq+pw1Gyfo67Vr1tonjMK81P1evTXuIAqwA98skrl57w9sCseXdoC3ltwkPlqrjeQA=="
+         crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <!-- palette start -->
+      <div
+         class="
+            platte
+            flex
+            absolute
+            flex-row
+            border
+            rounded-lg
+            bottom-2
+            right-2
+            bg-white
+            z-10
+         "
+         draggable="true"
+      >
+         <div
+            class="
+               hover-top
+               shadow-lg
+               w-20
+               h-20
+               m-1
+               text-center
+               rounded-lg
+               after:shadow-md after:opacity-0
+               hover:after:opacity-1
+               border
+               bg-[color:var(--color-bg-primary)]
+            "
+         ></div>
+         <div
+            class="
+               hover-top
+               shadow-lg
+               w-20
+               h-20
+               m-1
+               text-center
+               rounded-lg
+               after:shadow-md after:opacity-0
+               hover:after:opacity-1
+               border
+               bg-[color:var(--color-bg-primary-offset)]
+            "
+         ></div>
+         <div
+            class="
+               hover-top
+               shadow-lg
+               w-20
+               h-20
+               m-1
+               text-center
+               rounded-lg
+               after:shadow-md after:opacity-0
+               hover:after:opacity-1
+               border
+               bg-[color:var(--color-bg-secondary)]
+            "
+         ></div>
+         <div
+            class="
+               hover-top
+               shadow-lg
+               w-20
+               h-20
+               m-1
+               text-center
+               rounded-lg
+               after:shadow-md after:opacity-0
+               hover:after:opacity-1
+               border
+               bg-[color:var(--color-text-primary)]
+            "
+         ></div>
+         <div
+            class="
+               hover-top
+               shadow-lg
+               w-20
+               h-20
+               m-1
+               text-center
+               rounded-lg
+               after:shadow-md after:opacity-0
+               hover:after:opacity-1
+               border
+               bg-[color:var(--color-text-primary-offset)]
+            "
+         ></div>
+      </div>
+      <!-- palette end  -->
+      <!-- wrapper start -->
+      <div
+         class="
+            wrapper
+            relative
+            w-full
+            h-full
+            bg-[color:var(--color-bg-primary)]
+            flex
+            items-center
+            justify-center
+         "
+      >
+         <!-- menu start-->
+         <div
+            class="
+               absolute
+               menu
+               invisible
+               shadow
+               rounded-lg
+               bg-[color:var(--color-bg-secondary)]
+            "
+         >
+            <!-- list one -->
+            <ul class="block w-full">
+               <!-- COPY TEXT list -->
+               <li class="p-2 relative">
+                  <button
+                     class="
+                        flex flex-row
+                        relative
+                        items-center
+                        p-[8px]
+                        pr-[120px]
+                        w-full
+                        rounded-md
+                        text-left
+                        bg-[color:var(--color-bg-secondary)]
+                        hover:bg-[color:var(--color-bg-primary-offset)]
+                     "
+                  >
+                     <i data-feather="copy" class="mr-4"></i>
+                     Copy text
+                  </button>
+               </li>
+               <!-- COPY TEXT list end -->
+            </ul>
+            <!-- list one end -->
+            <!-- list two -->
+            <ul class="block w-full">
+               <!-- ARCHIVE list -->
+               <li class="p-2 relative">
+                  <button
+                     class="
+                        flex flex-row
+                        relative
+                        items-center
+                        p-[8px]
+                        pr-[120px]
+                        w-full
+                        rounded-md
+                        text-left
+                        bg-[color:var(--color-bg-secondary)]
+                        hover:bg-[color:var(--color-bg-primary-offset)]
+                     "
+                  >
+                     <i data-feather="archive" class="mr-4"></i>
+                     Archive
+                  </button>
+               </li>
+               <!-- ARCHIVE list end -->
+               <!-- MOVE TO list -->
+               <li class="p-2 relative">
+                  <button
+                     class="
+                        peer
+                        flex flex-row
+                        relative
+                        items-center
+                        p-[8px]
+                        pr-[120px]
+                        w-full
+                        rounded-md
+                        text-left
+                        bg-[color:var(--color-bg-secondary)]
+                        hover:bg-[color:var(--color-bg-primary-offset)]
+                     "
+                  >
+                     <i data-feather="folder" class="mr-4"></i>
+                     Move to
+                     <i
+                        data-feather="chevron-right"
+                        class="absolute right-[8px]"
+                     ></i>
+                  </button>
+                  <!-- MOVE TO list end-->
+                  <!-- MOVE TO'S sublist -->
+                  <ul
+                     class="
+                     sublist
+                        hidden
+                        absolute
+                        flex flex-col
+                        z-10
+                        w-full
+                        top-[8px]
+                        left-[calc(100%-8px)]
+                        rounded-md
+                        border
+                        bg-[color:var(--color-bg-secondary)]
+                        hover:flex
+                        peer-hover:flex
+                     "
+                  >
+                     <!-- PENDING list -->
+                     <li class="p-2">
+                        <button
+                           class="
+                              flex flex-row
+                              relative
+                              items-center
+                              p-[8px]
+                              pr-[120px]
+                              w-full
+                              rounded-md
+                              text-left
+                              bg-[color:var(--color-bg-secondary)]
+                              hover:bg-[color:var(--color-bg-primary-offset)]
+                           "
+                        >
+                           <i
+                              data-feather="list"
+                              class="mr-4 text-[color:var(--color-orange)]"
+                           ></i>
+                           Pending
+                        </button>
+                     </li>
+                     <!-- PENDING list end -->
+                     <!-- CHECKED list -->
+                     <li class="p-2">
+                        <button
+                           class="
+                              flex flex-row
+                              relative
+                              items-center
+                              p-[8px]
+                              pr-[120px]
+                              w-full
+                              rounded-md
+                              text-left
+                              bg-[color:var(--color-bg-secondary)]
+                              hover:bg-[color:var(--color-bg-primary-offset)]
+                           "
+                        >
+                           <i
+                              data-feather="check-circle"
+                              class="mr-4 text-[color:var(--color-green)]"
+                           ></i>
+                           Checked
+                        </button>
+                     </li>
+                     <!-- CHECKED list end -->
+                  </ul>
+                  <!-- MOVE TO'S sublist end-->
+               </li>
+               <!-- MOVE TO end -->
+            </ul>
+            <!-- list two end -->
+            <!-- list three -->
+            <ul class="block w-full">
+               <!-- DELETE list -->
+               <li class="p-2 relative">
+                  <button
+                     class="
+                        flex flex-row
+                        relative
+                        items-center
+                        p-[8px]
+                        pr-[120px]
+                        w-full
+                        rounded-md
+                        text-left
+                        bg-[color:var(--color-bg-secondary)]
+                        hover:bg-[color:var(--color-bg-primary-offset)]
+                     "
+                  >
+                     <i data-feather="trash-2" class="mr-4"></i>
+                     Delete
+                  </button>
+               </li>
+               <!-- DELETE list end -->
+            </ul>
+            <!-- list three end -->
+         </div>
+         <!-- menu end-->
+      </div>
+      <!-- wrapper end -->
+      <script src="script.js"></script>
+   </body>
+</html>
